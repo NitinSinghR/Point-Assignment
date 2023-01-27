@@ -12,12 +12,17 @@ public class Main {
         int x = sc.nextInt();
         l.info("Enter the y value:");
         int  y = sc.nextInt();
+        Point p=new Point(x,y);
 
-        Point p1=new Point(x,y);
-        String e=p1.equals(x,y);
+        Point p1=(Point)p.clone();
+        l.info("Enter the x value:");
+        int x1 = sc.nextInt();
+        l.info("Enter the y value:");
+        int  y1 = sc.nextInt();
+
+        //Point p2=new Point(x,y);
+        String e=p1.equals(x1,y1);
         l.info(e);
-
-        Point p2=(Point)p1.clone();
     }
 }
 class Point extends Main implements Cloneable{
@@ -29,7 +34,7 @@ class Point extends Main implements Cloneable{
     }
 
     public String equals(int x,int y) {
-        if (x1 == y1) {
+        if (x1 == x && y == y1) {
             return "true";
         } else {
             return "false";
