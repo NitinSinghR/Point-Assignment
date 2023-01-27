@@ -1,19 +1,20 @@
 package org.example;
 
-import java.io.*;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class Main {
     public static void main(String[] args) throws CloneNotSupportedException {
         Scanner sc = new Scanner(System.in);
+        Logger l= Logger.getLogger("com.api.jar");
 
-        System.out.println("Enter the x value:");
+        l.info("Enter the x value:");
         int x = sc.nextInt();
-        System.out.println("Enter the y value:");
+        l.info("Enter the y value:");
         int  y = sc.nextInt();
 
         Point p1=new Point(x,y);
-        System.out.println(p1.equals(x,y));
+        l.info(p1.equals(x,y));
 
         Point p2=(Point)p1.clone();
     }
@@ -33,9 +34,9 @@ class Point extends Main implements Cloneable{
             return "false";
         }
     }
+
     public Object clone() throws CloneNotSupportedException
     {
         return super.clone();
     }
-
 }
