@@ -14,7 +14,8 @@ public class Main {
         int  y = sc.nextInt();
 
         Point p1=new Point(x,y);
-        l.info(p1.equals(x,y));
+        String e=p1.equals(x,y);
+        l.info(e);
 
         Point p2=(Point)p1.clone();
     }
