@@ -20,7 +20,6 @@ public class Main {
         l.info("Enter the y value:");
         int  y1 = sc.nextInt();
 
-        //Point p2=new Point(x,y);
         String e=p1.equals(x1,y1);
         l.info(e);
     }
